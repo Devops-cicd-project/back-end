@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-allauth = "*"
+django-contact-form = "*"
+django-cors-headers = "*"
+django-crispy-forms = "*"
+djangorestframework = "*"
+django-filter = "*"
+pillow = "*"
+pipenv = "*"
+markdown = "*"
+python-dotenv = "*"
+typing-extensions = "*"
+psycopg2-binary = "*"
+environ = "*"
+dj-database-url = "*"
+django-environ = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
