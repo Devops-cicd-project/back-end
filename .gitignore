@@ -297,3 +297,9 @@ pip-selfcheck.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/django,python,virtualenv,venv,visualstudiocode
+
+# Edit at https://www.toptal.com/developers/gitignore?templates=ansible
+### Ansible ###
+*.retry
+
+# End of https://www.toptal.com/developers/gitignore/api/ansible

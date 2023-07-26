@@ -1,0 +1,33 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install pipenv
+      
+      - name: Generate .env file
+        run: |
+          echo "DEBUG=$DEBUG" >> .env
+          echo "DEVELOPMENT_MODE=$DEVELOPMENT_MODE" >> .env
+          # Add more environment variable assignments as needed
+          echo "Environment variables written to .env file"
+      
+      - name: Deploy your application
+        run: |
+          # Add the necessary commands to deploy your application

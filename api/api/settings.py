@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
     'main',
     'corsheaders',
     'rest_framework',
@@ -79,7 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api.wsgi.application'
 
-# Storing caches 
+# Storing caches
 # install reddis cache
 # CACHES = {
 #     'default': {
@@ -146,19 +145,13 @@ DEVELOPMENT_MODE = env('DEVELOPMENT_MODE')
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
-# change to a
-# 
-# aws s3 bucket
+# change to a aws s3 bucket
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if DEVELOPMENT_MODE:
-    STATICFILES_DIRS = [
-       os.path.join(BASE_DIR, 'main/static')
-    ]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
 else:
     STATIC_ROOT = BASE_DIR / 'static'
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
